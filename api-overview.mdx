@@ -1,0 +1,127 @@
+---
+title: API Overview
+description: Learn about the Kane Tornberg Documentation API for programmatic access
+---
+
+## API Introduction
+
+You interact with Kane Tornberg Documentation programmatically using the REST API. The API provides endpoints for managing projects, pages, and users.
+
+<Columns cols={3}>
+  <Card title="Projects" icon="folder" href="#projects">
+    Create and manage documentation projects.
+  </Card>
+  <Card title="Pages" icon="file" href="#pages">
+    Add, update, and delete documentation pages.
+  </Card>
+  <Card title="Users" icon="users" href="#users">
+    Manage team members and permissions.
+  </Card>
+</Columns>
+
+## Authentication
+
+You authenticate API requests using API keys or OAuth tokens. Include the authorization header in all requests.
+
+<Steps>
+  <Step title="Get API Key" icon="key">
+    Generate an API key from your account settings.
+  </Step>
+  <Step title="Include Header" icon="header">
+    Add the key to the Authorization header.
+  </Step>
+  <Step title="Make Requests" icon="send">
+    Use the key for all API calls.
+  </Step>
+</Steps>
+
+## Projects API
+
+<Request tabs="cURL,Python" show-lines="true">
+  ```bash
+curl -X GET \
+  https://api.kanetornberg.com/v1/projects \
+  -H 'Authorization: Bearer YOUR_API_KEY'
+  ```
+  ```python
+import requests
+
+headers = {'Authorization': 'Bearer YOUR_API_KEY'}
+response = requests.get('https://api.kanetornberg.com/v1/projects', headers=headers)
+  ```
+</Request>
+
+<Response tabs="Success,Error" show-lines="false">
+  ```json
+{
+  "projects": [
+    {
+      "id": "123",
+      "name": "My Project",
+      "description": "Project documentation"
+    }
+  ]
+}
+  ```
+  ```json
+{
+  "error": "Unauthorized",
+  "message": "Invalid API key"
+}
+  ```
+</Response>
+
+## Pages API
+
+<ParamField path="projectId" param-type="string" required="true">
+  The unique identifier of the project.
+</ParamField>
+
+<ParamField path="pageId" param-type="string" required="true">
+  The unique identifier of the page.
+</ParamField>
+
+## Error Handling
+
+<ExpandableGroup>
+  <Expandable title="Common Errors" default-open="false">
+    Handle authentication failures and rate limits appropriately.
+  </Expandable>
+  <Expandable title="Rate Limits" default-open="false">
+    Respect API rate limits to avoid throttling.
+  </Expandable>
+</ExpandableGroup>
+
+## SDKs and Libraries
+
+You use official SDKs for popular languages. Download from the developer portal.
+
+<Tabs>
+  <Tab title="JavaScript" icon="code">
+    ```javascript
+const client = new KaneTornbergClient({
+  apiKey: 'YOUR_API_KEY'
+});
+
+const projects = await client.getProjects();
+    ```
+  </Tab>
+  <Tab title="Python" icon="terminal">
+    ```python
+from kanetornberg import Client
+
+client = Client(api_key='YOUR_API_KEY')
+projects = client.get_projects()
+    ```
+  </Tab>
+</Tabs>
+
+<Callout kind="info">SDKs simplify integration and handle authentication automatically.</Callout>
+
+## Webhooks
+
+You set up webhooks to receive notifications about changes. Configure endpoints for real-time updates.
+
+<Expandable title="Webhook Configuration" default-open="false">
+  Specify URLs and events to monitor for webhook delivery.
+</Expandable>

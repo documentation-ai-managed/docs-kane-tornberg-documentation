@@ -1,0 +1,97 @@
+---
+title: Introduction
+description: Overview of Kane Tornberg Documentation and its core capabilities
+---
+
+## Getting Started
+
+Kane Tornberg Documentation provides a comprehensive platform for organizing and managing all your project documentation. You create a centralized space where teams can access guides, API references, and release notes seamlessly. This documentation site serves as your default hub for project information.
+
+<Columns cols={3}>
+  <Card title="Easy Setup" icon="rocket" href="#setup">
+    Get started quickly with intuitive navigation and automatic organization.
+  </Card>
+  <Card title="API Integration" icon="code" href="#api">
+    Integrate with your existing tools and workflows.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="#collaboration">
+    Share and collaborate on documentation with your team.
+  </Card>
+</Columns>
+
+## Key Features
+
+You organize your documentation into logical sections with customizable navigation. The platform supports multiple formats including Markdown, and you can embed code examples, diagrams, and interactive components.
+
+<Tabs>
+  <Tab title="Markdown Support" icon="file-text">
+    Write documentation in Markdown with support for tables, links, and formatting.
+  </Tab>
+  <Tab title="API References" icon="terminal">
+    Generate API documentation automatically from OpenAPI specifications.
+  </Tab>
+  <Tab title="Version Control" icon="git-branch">
+    Track changes and maintain version history for your documentation.
+  </Tab>
+</Tabs>
+
+## Quick Start
+
+<Steps>
+  <Step title="Create Account" icon="user">
+    Sign up for Kane Tornberg Documentation to access your personal space.
+  </Step>
+  <Step title="Import Projects" icon="folder">
+    Import your existing documentation or start fresh with new projects.
+  </Step>
+  <Step title="Customize Navigation" icon="settings">
+    Organize your documentation with tabs, groups, and pages.
+  </Step>
+  <Step title="Publish" icon="upload">
+    Share your documentation with your team or make it publicly available.
+  </Step>
+</Steps>
+
+## Code Examples
+
+````javascript
+const documentation = new KaneTornberg({
+  title: 'My Project Docs',
+  version: '1.0.0'
+});
+
+documentation.addPage({
+  path: 'introduction',
+  content: '# Welcome to my docs'
+});
+````
+
+## Frequently Asked Questions
+
+<ExpandableGroup>
+  <Expandable title="How do I import existing documentation?" default-open="false">
+    You upload your Markdown files or connect to your repository for automatic import.
+  </Expandable>
+  <Expandable title="Can I customize the appearance?" default-open="false">
+    Yes, you configure themes, colors, and branding through the settings panel.
+  </Expandable>
+  <Expandable title="Is API documentation supported?" default-open="false">
+    Absolutely, you generate API docs from OpenAPI specs with interactive endpoints.
+  </Expandable>
+</ExpandableGroup>
+
+## Best Practices
+
+<Callout kind="tip">Organize your documentation logically with clear navigation to help users find information quickly.</Callout>
+
+<Callout kind="info">Use consistent formatting and terminology across all pages for better readability.</Callout>
+
+<Update label="2024-10-15" description="v1.0.0" tags={["feature"]}>
+
+## New Features
+
+- Initial release with core documentation management features
+- Support for Markdown formatting and custom components
+- API reference generation from specifications
+
+</Update>

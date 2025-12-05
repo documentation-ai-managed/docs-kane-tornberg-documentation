@@ -1,0 +1,90 @@
+---
+title: Getting Started
+description: Step-by-step guide to set up and use Kane Tornberg Documentation
+---
+
+## Installation
+
+You begin by creating an account on the Kane Tornberg platform. Navigate to the signup page and provide your email address and password. Once registered, you receive a confirmation email to verify your account.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Create your account with email verification.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Click the verification link in your email.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Access your documentation dashboard.
+  </Step>
+</Steps>
+
+## Project Setup
+
+After logging in, you create your first documentation project. Choose a name and description that reflects your project's purpose. You can import existing documentation or start with templates.
+
+<CodeGroup tabs="CLI,Web Interface">
+  ```bash
+kane-tornberg create-project --name "My Docs" --description "Project documentation"
+  ```
+  ```javascript
+const project = await api.createProject({
+  name: 'My Docs',
+  description: 'Project documentation'
+});
+  ```
+</CodeGroup>
+
+## Adding Content
+
+You add pages to your documentation using the web editor or by uploading Markdown files. Each page supports rich formatting including code blocks, tables, and embedded media.
+
+<Tabs>
+  <Tab title="Web Editor" icon="edit">
+    Use the built-in editor to write and format your content directly in the browser.
+  </Tab>
+  <Tab title="File Upload" icon="upload">
+    Upload existing Markdown files to import your documentation.
+  </Tab>
+  <Tab title="API" icon="code">
+    Use the REST API to programmatically add and update content.
+  </Tab>
+</Tabs>
+
+## Navigation Configuration
+
+You organize your documentation with customizable navigation. Create tabs for different sections and groups for related pages.
+
+<Expandable title="Advanced Navigation" default-open="false">
+  Use nested groups and custom icons to create intuitive navigation structures.
+</Expandable>
+
+## Publishing
+
+Once your content is ready, you publish your documentation. Choose between private access for your team or public sharing.
+
+<Callout kind="info">Publishing makes your documentation live and accessible to your intended audience.</Callout>
+
+## Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Upload Issues" default-open="false">
+    Check file format and size limits for uploads.
+  </Expandable>
+  <Expandable title="Editor Problems" default-open="false">
+    Clear browser cache and try a different browser.
+  </Expandable>
+</ExpandableGroup>
+
+## Example Workflow
+
+````bash
+# Create project
+kane-tornberg create-project --name "API Docs"
+
+# Add a page
+kane-tornberg add-page --project "API Docs" --path "introduction" --content "# Welcome"
+
+# Publish
+kane-tornberg publish --project "API Docs"
+````

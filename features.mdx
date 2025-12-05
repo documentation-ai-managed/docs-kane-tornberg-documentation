@@ -1,0 +1,98 @@
+---
+title: Features
+description: Explore the key features and capabilities of Kane Tornberg Documentation
+---
+
+## Rich Content Support
+
+You create engaging documentation with support for various content types. The platform handles Markdown, code highlighting, and embedded components seamlessly.
+
+<Columns cols={3}>
+  <Card title="Markdown" icon="file-text" href="#markdown">
+    Full Markdown support with extensions.
+  </Card>
+  <Card title="Code Blocks" icon="code" href="#code">
+    Syntax highlighting for multiple languages.
+  </Card>
+  <Card title="Components" icon="puzzle" href="#components">
+    Interactive components for better UX.
+  </Card>
+</Columns>
+
+## Interactive Components
+
+You enhance your documentation with interactive elements. Use tabs for comparisons, expandable sections for details, and cards for navigation.
+
+<Tabs>
+  <Tab title="Tabs" icon="layers">
+    Organize content into tabbed sections.
+  </Tab>
+  <Tab title="Expandable" icon="chevron-down">
+    Hide detailed information until needed.
+  </Tab>
+  <Tab title="Cards" icon="grid">
+    Create visual navigation elements.
+  </Tab>
+</Tabs>
+
+## API Documentation
+
+You generate comprehensive API documentation automatically from OpenAPI specifications. The system creates interactive endpoint pages with request/response examples.
+
+<Steps>
+  <Step title="Upload Spec" icon="upload">
+    Upload your OpenAPI YAML or JSON file.
+  </Step>
+  <Step title="Auto-Generate" icon="cpu">
+    The platform generates documentation pages.
+  </Step>
+  <Step title="Customize" icon="settings">
+    Add descriptions and examples as needed.
+  </Step>
+</Steps>
+
+## Version Management
+
+You maintain multiple versions of your documentation. Track changes and provide version-specific access to users.
+
+<ExpandableGroup>
+  <Expandable title="Version History" default-open="false">
+    View all changes and roll back if needed.
+  </Expandable>
+  <Expandable title="Branching" default-open="false">
+    Create branches for different environments.
+  </Expandable>
+</ExpandableGroup>
+
+## Collaboration Tools
+
+You work with your team using built-in collaboration features. Comment on pages, suggest edits, and manage permissions.
+
+<Callout kind="tip">Use team collaboration to keep documentation current and accurate.</Callout>
+
+## Search and Navigation
+
+You find information quickly with powerful search functionality and intuitive navigation structures.
+
+````javascript
+const search = new Search({
+  index: 'documentation',
+  query: 'authentication'
+});
+
+const results = await search.execute();
+````
+
+## Integration Options
+
+You connect Kane Tornberg Documentation with your existing tools. Integrate with CI/CD pipelines, version control systems, and project management platforms.
+
+<Expandable title="Webhook Support" default-open="false">
+  Set up webhooks to trigger updates when code changes.
+</Expandable>
+
+## Analytics and Insights
+
+You track usage and engagement with built-in analytics. Understand which pages are most viewed and identify areas for improvement.
+
+<Callout kind="info">Analytics help you optimize your documentation for better user experience.</Callout>
